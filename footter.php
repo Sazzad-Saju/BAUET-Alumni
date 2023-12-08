@@ -1,5 +1,5 @@
 <footer class="footer">
-      <div class="containerfootter">
+      <div class="containerfootter above">
         <div class="row">
           <div class="footer-col">
             <h4>Usefull Link</h4>
@@ -30,6 +30,30 @@
           <div class="footer-col">
             <h4>follow us</h4>
             <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid below text-center">
+        <div class="footer_nav footer_mob">
+          <h4 class="red">Usefull Link</h4>
+          <li><a href="#">University Website</a></li>
+          <li><a href="#">Career Services</a></li>
+          <li><a href="#">Events and Reunions</a></li>
+          <li><a href="#">Mentorship Programs</a></li>
+          
+          <h4 class="pt-2">Get Help</h4>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Report Problem</a></li>
+          <li><a href="#">Contact us</a></li>
+        </div>
+        <div class="footer-col mt-3 text-center">
+          <div class="social-icons">
+            <div class="social-links ">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>

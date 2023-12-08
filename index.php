@@ -14,8 +14,7 @@
 
     <title>alumni</title>
     <link rel="stylesheet" href="hf.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -24,49 +23,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
 
     <!--owl slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- font awesome style -->
     <link href="css/font-awesome.min.css" rel="stylesheet" />
     <!-- nice select -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
-        integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
     <!-- datepicker -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" />
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
     <link href="test.css" rel="stylesheet" />
     <style>
-    .donation-bar {
-        background-color: #4CAF50;
-        /* Green color */
-        color: white;
-        text-align: center;
-        padding: 10px;
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
+        .donation-bar {
+            background-color: #4CAF50;
+            /* Green color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
 
-    .donation-text {
-        font-size: 18px;
-    }
+        .donation-text {
+            font-size: 18px;
+        }
 
-    .donate-button {
-        background-color: #f44336;
-        /* Red color */
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 16px;
-    }
+        .donate-button {
+            background-color: #f44336;
+            /* Red color */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
     </style>
 </head>
 
@@ -77,25 +72,34 @@
         <!-- header section strats -->
         <header class="header_section">
             <div class="header_top">
-                <div class="container">
-                    <div class="contact_nav">
-                        <a href="">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                            <span> Call : +8801708503510 </span>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <span> Email : info@bauet.ac.bd </span>
-                        </a>
-                        <a href="">
-                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <span> Qadirabad, Dayarampur, Natore-6431, Bangladesh </span>
-                        </a>
-                        <a href="./donetion.html">
-                            <i class="fa fa-donation" aria-hidden="true"></i>
-                            <span style="color: #FF0000;">DONATION</span>
-                        </a>
-
+                <div class="container text-center">
+                    <div class="contact_nav row">
+                        <!-- <div class="row"> -->
+                            <div class="col">
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span> Call : +8801708503510 </span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span> Email : info@bauet.ac.bd </span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span> Qadirabad, Dayarampur, Natore-6431, Bangladesh </span>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="./donetion.html">
+                                    <i class="fas fa-donate" aria-hidden="true"></i>
+                                    <span style="color: #FF0000;">DONATION</span>
+                                </a>
+                            </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -106,9 +110,7 @@
                             <img src="images/bauetlogo.png" alt="" />
                         </a>
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class=""> </span>
                         </button>
 
@@ -116,8 +118,7 @@
                             <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                                 <ul class="navbar-nav">
                                     <li class="nav-item active">
-                                        <a class="nav-link" href="index.html">Home <span
-                                                class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="about.html"> About</a>
@@ -297,59 +298,60 @@
 
 
 
-    <section class="sectionmid">
+    <section class="sectionmid mt-5">
         <div class="blue-div">
             <h1>Notice</h1>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Title</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Title</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php
-        
-        $host = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "alumni";
+                        $host = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbname = "alumni";
 
-        // Create a new database connection
-        $connection = mysqli_connect($host, $username, $password, $dbname);
+                        // Create a new database connection
+                        $connection = mysqli_connect($host, $username, $password, $dbname);
 
-        // Check if the connection was successful
-        if (mysqli_connect_errno()) {
-          die("Database connection failed: " . mysqli_connect_error());
-        }
+                        // Check if the connection was successful
+                        if (mysqli_connect_errno()) {
+                            die("Database connection failed: " . mysqli_connect_error());
+                        }
 
-        // Query the database to retrieve the notice data
-        $query = "SELECT id, date, title FROM notice";
-        $result = mysqli_query($connection, $query);
+                        // Query the database to retrieve the notice data
+                        $query = "SELECT id, date, title FROM notice";
+                        $result = mysqli_query($connection, $query);
 
-        // Loop through the query results and display the data in table rows
-        while ($row = mysqli_fetch_assoc($result)) {
-          $id = $row['id'];
-          $date = $row['date'];
-          $title = $row['title'];
-        ?>
-                    <tr>
-                        <td><?php echo $date; ?></td>
-                        <td><?php echo $title; ?></td>
-                        <td>
-                            <a href="viewnotice.php?id=<?php echo $id; ?>">View</a>
-                        </td>
-                    </tr>
-                    <?php
-        }
+                        // Loop through the query results and display the data in table rows
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $id = $row['id'];
+                            $date = $row['date'];
+                            $title = $row['title'];
+                        ?>
+                            <tr>
+                                <td><?php echo $date; ?></td>
+                                <td><?php echo $title; ?></td>
+                                <td>
+                                    <a href="viewnotice.php?id=<?php echo $id; ?>">View</a>
+                                </td>
+                            </tr>
+                        <?php
+                        }
 
-        // Close the database connection
-        mysqli_close($connection);
-        ?>
-                </tbody>
-            </table>
+                        // Close the database connection
+                        mysqli_close($connection);
+                        ?>
+                    </tbody>
+                </table>
+            </div>
 
 
         </div>
@@ -357,58 +359,57 @@
     </section>
 
 
-   <div class="container">
-    <h1 > Image Gallery</h1>
-   </div>
+    <div class="container">
+        <h1> Image Gallery</h1>
+    </div>
 
     <section class="thirdsection">
 
         <?php
-    // Database connection configuration
-    $host = 'localhost';
-    $username = 'root';
-    $password = '';
-    $database = 'alumni';
+        // Database connection configuration
+        $host = 'localhost';
+        $username = 'root';
+        $password = '';
+        $database = 'alumni';
 
-    // Create a new PDO instance
-    $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+        // Create a new PDO instance
+        $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
 
-    // Fetch rows from the gallery table
-    $stmt = $pdo->query("SELECT id, title, image FROM gallery");
+        // Fetch rows from the gallery table
+        $stmt = $pdo->query("SELECT id, title, image FROM gallery");
 
-    // Display the rows
-    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $id = $row['id'];
-        $title = $row['title'];
-        $image = $row['image'];
+        // Display the rows
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $id = $row['id'];
+            $title = $row['title'];
+            $image = $row['image'];
 
-        echo '
+            echo '
         <div class="gallery">
             <a target="_blank" href="images/' . $image . '">
                 <img src="uploads/' . $image . '" alt="' . $title . '" width="600" height="400">
             </a>
             <div class="desc">' . $title . '</div>
         </div>';
-    }
+        }
 
-    // Close the database connection
-    $pdo = null;
-    ?>
+        // Close the database connection
+        $pdo = null;
+        ?>
     </section>
 
 
 
 
     <?php
-include 'footter.php';
-?>
+    include 'footter.php';
+    ?>
     <!-- jQery -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <!-- bootstrap js -->
     <script src="js/bootstrap.js"></script>
     <!-- nice select -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
-        integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
     <!-- owl slider -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- datepicker -->

@@ -22,6 +22,10 @@
   .quote_btn-container {
     flex-direction: column;
     align-items: center;
+    background: #00C6A9;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
   }
 
   .quote_btn-container a {

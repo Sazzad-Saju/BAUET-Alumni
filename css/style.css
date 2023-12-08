@@ -474,3 +474,61 @@ body {
   cursor: pointer;
   font-size: 16px;
 }
+
+footer{
+  color: #fff;
+}
+
+.footer_nav{
+  list-style: none;
+  color: #fff;
+  margin: auto;
+}
+
+
+
+.footer_nav a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.above {
+  display: block;
+}
+
+.below {
+  display: none;
+}
+
+.footer_mob h4 {
+  position: relative;
+  display: inline-block;
+}
+
+.footer_mob h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+
+@media (max-width: 860px) {
+  .above {
+    display: none;
+  }
+
+  .below {
+    display: block;
+  }
+  
+  .footer{
+    padding: 20px;
+  }
+  
+  .footer-col{
+    margin: auto;
+  }
+}
