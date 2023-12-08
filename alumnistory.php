@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
     <title>User Information</title>
+    <link rel="stylesheet" href="css/style.css" />
     <style>
         body {
             font-family: 'Arial', sans-serif;

@@ -475,6 +475,8 @@ body {
   font-size: 16px;
 }
 
+/* Footer Design */
+
 footer{
   color: #fff;
 }
@@ -484,8 +486,6 @@ footer{
   color: #fff;
   margin: auto;
 }
-
-
 
 .footer_nav a{
   text-decoration: none;
@@ -531,4 +531,127 @@ footer{
   .footer-col{
     margin: auto;
   }
+  
+  .teamSection .row .col-md-3{
+    margin-bottom: 20px;
+  }
+  .img-bellow{
+    display: none;
+  }
+}
+
+/* photo gallery */
+/* work section design */
+
+.work-sec {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.work-sec img {
+  padding: 0.5px;
+  opacity: 1;
+  /* backface-visibility: hidden; */
+  transition: .5s ease;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  transform: translate(-15%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.work-sec:hover {
+  background-color: #00c6a9;
+}
+
+.work-sec:hover img {
+  opacity: 0.2;
+}
+
+.work-sec:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 12px;
+  padding: 16px 32px;
+  font-family: 'Raleway';
+  opacity: 0;
+}
+
+.work-sec:hover .middle .text {
+  opacity: 1;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.fix-extends {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Team section */
+
+.teamSection {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  /* display: flex; */
+  width: 75%;
+  justify-content: center;
+}
+
+.teamSection .fullname {
+  font-size: 24px;
+  font-family: 'Raleway';
+  font-weight: 500;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+.title-sec {
+  color: #00c6a9;
+  font-size: 14px;
+  font-family: 'Raleway';
+  text-transform: uppercase;
+}
+
+.teamSection div div .description {
+  margin-top: 25px;
+}
+
+.description {
+  display: block;
+  color: #6c7279;
+  font-size: 14px;
+  font-family: 'Raleway';
+}
+
+.social-links {
+  margin-top: 25px;
+  color: #c5c9cc;
+}
+
+.social-links small i {
+  text-align: center;
+  width: 30px;
+}
+
+.social-links small {
+  font-size: 16px;
+  border: 1px solid #e7ebed;
+  padding: 5px 0 5px 0;
 }

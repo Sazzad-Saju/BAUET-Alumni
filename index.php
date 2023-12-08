@@ -74,7 +74,6 @@
             <div class="header_top">
                 <div class="container text-center">
                     <div class="contact_nav row">
-                        <!-- <div class="row"> -->
                             <div class="col">
                                 <a href="">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -90,7 +89,7 @@
                             <div class="col">
                                 <a href="">
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span> Qadirabad, Dayarampur, Natore-6431, Bangladesh </span>
+                                    <span> 72Q5+VV Qadirabad, BD </span>
                                 </a>
                             </div>
                             <div class="col">
@@ -99,7 +98,6 @@
                                     <span style="color: #FF0000;">DONATION</span>
                                 </a>
                             </div>
-                        <!-- </div> -->
                     </div>
                 </div>
             </div>
@@ -359,11 +357,90 @@
     </section>
 
 
-    <div class="container">
+    <div class="container py-3">
         <h1> Image Gallery</h1>
     </div>
+    
+    <div class="container-fluid fix-extends" id="works">
+        <div class="row">
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work1.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work2.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work3.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work4.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row img-bellow">
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work5.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work6.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work7.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 work-sec">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work8.png" class="img-fluid" alt="">
+                <div class="middle">
+                    <div class="text">
+                        <p class="title">Project Name</p>
+                        <p>User Interface Design</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <section class="thirdsection">
+    <!-- <section class="thirdsection">
 
         <?php
         // Database connection configuration
@@ -396,8 +473,65 @@
         // Close the database connection
         $pdo = null;
         ?>
-    </section>
-
+    </section> -->
+    
+    <!-- Team section: Teacher+Alumni+Donor -->
+    <div class="container teamSection" id="team">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/team 1.png" class="img-fluid" alt="">
+                <p class="fullname">Ruth Woods</p>
+                <small class="title-sec">Vice Chancellor</small>
+                <small class="description">
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.
+                </small>
+                <div class="social-links">
+                    <small><i class="fa fa-facebook-f"></i></small>
+                    <small><i class="fa fa-twitter"></i></small>
+                    <small><i class="fa fa-linkedin"></i></small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/team 2.png" class="img-fluid" alt="">
+                <p class="fullname">Dr. Timothy Reed</p>
+                <small class="title-sec">Senior Professor</small>
+                <small class="description">
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.
+                </small>
+                <div class="social-links">
+                    <small><i class="fa fa-facebook-f"></i></small>
+                    <small><i class="fa fa-twitter"></i></small>
+                    <small><i class="fa fa-linkedin"></i></small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/team 3.png" class="img-fluid" alt="">
+                <p class="fullname">Victoria Valdez</p>
+                <small class="title-sec">Lecturer</small>
+                <small class="description">
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.
+                </small>
+                <div class="social-links">
+                    <small><i class="fa fa-facebook-f"></i></small>
+                    <small><i class="fa fa-twitter"></i></small>
+                    <small><i class="fa fa-linkedin"></i></small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/team 4.png" class="img-fluid" alt="">
+                <p class="fullname">Beverly Little</p>
+                <small class="title-sec">Alumni, Donor</small>
+                <small class="description">
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Nullam quis risus eget urna mollis ornare vel eu leo.
+                </small>
+                <div class="social-links">
+                    <small><i class="fa fa-facebook-f"></i></small>
+                    <small><i class="fa fa-twitter"></i></small>
+                    <small><i class="fa fa-linkedin"></i></small>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

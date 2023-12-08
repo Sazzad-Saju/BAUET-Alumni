@@ -60,7 +60,7 @@ mysqli_close($connection);
     <title>Student Information Upload</title>
     <link rel="stylesheet" href="hf.css" />
     <link rel="stylesheet" href="reg.css">
-    
+    <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       type="text/css"

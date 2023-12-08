@@ -9,6 +9,7 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/style.css" />
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -105,7 +106,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 } else {
     // No events found
-    echo "No events found.";
+    echo "<p class='my-5'>No events found.<p>";
 }
 
 // Close the database connection
