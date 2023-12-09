@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Aug 03, 2023 at 07:07 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Host: localhost:3306
+-- Generation Time: Dec 09, 2023 at 01:38 PM
+-- Server version: 5.7.33
+-- PHP Version: 8.1.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -85,7 +85,8 @@ CREATE TABLE `gallery` (
 --
 
 INSERT INTO `gallery` (`id`, `title`, `image`) VALUES
-(3, 'hello ', 'texture01.jpg');
+(4, 'test', 'Elena Miledi2.jpg'),
+(5, 'work1', 'work1.png');
 
 -- --------------------------------------------------------
 
@@ -97,7 +98,7 @@ CREATE TABLE `login_codes` (
   `id` int(11) NOT NULL,
   `student_id` int(11) NOT NULL,
   `code` varchar(6) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -142,8 +143,19 @@ CREATE TABLE `students` (
   `pass` varchar(255) DEFAULT NULL,
   `currently_worked` varchar(255) DEFAULT NULL,
   `livein` varchar(100) DEFAULT NULL,
-  `coverphoto` varchar(5000) DEFAULT NULL
+  `coverphoto` varchar(5000) DEFAULT NULL,
+  `verification` varchar(6) DEFAULT NULL,
+  `verify` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`student_id`, `first_name`, `last_name`, `father_name`, `mother_name`, `date_of_birth`, `batch`, `department`, `session_year`, `photo`, `mobile`, `email`, `pass`, `currently_worked`, `livein`, `coverphoto`, `verification`, `verify`) VALUES
+(1, 'ds', 'ss', 'sf', 'gs', '2023-12-01', '10', 'CSE', '10', 'photo_uploads/Elena Miledi.jpg', '01766601932', 'saju@mail.com', 'saju', 'lynkto', NULL, NULL, NULL, 0),
+(11, 'a', 's', 'd', 'f', '2011-11-11', '1', 'CSE', '2011', 'photo_uploads/Allie Haze.jpg', '11', 't@mail.com', '123', 'a', NULL, NULL, '732451', 1),
+(1602049, 'Sazzad', 'Saju', 'Robert De Niro', 'Verenika', '1996-11-18', '10', 'CSE', '2016', 'photo_uploads/circle-cropped (2).png', '01766601932', 'sazzadsaju17@gmail.com', '123', 'lynkto', NULL, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -156,6 +168,15 @@ CREATE TABLE `verify` (
   `date_of_birth` date NOT NULL,
   `session_year` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `verify`
+--
+
+INSERT INTO `verify` (`student_id`, `date_of_birth`, `session_year`) VALUES
+(1, '2023-12-01', '10'),
+(11, '2011-11-11', '2011'),
+(1602049, '1996-11-18', '2016');
 
 --
 -- Indexes for dumped tables
@@ -223,19 +244,19 @@ ALTER TABLE `adminlogin`
 -- AUTO_INCREMENT for table `all_post`
 --
 ALTER TABLE `all_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `login_codes`
@@ -247,7 +268,7 @@ ALTER TABLE `login_codes`
 -- AUTO_INCREMENT for table `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
