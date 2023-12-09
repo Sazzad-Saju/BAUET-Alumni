@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 09, 2023 at 01:38 PM
+-- Generation Time: Dec 09, 2023 at 01:50 PM
 -- Server version: 5.7.33
 -- PHP Version: 8.1.20
 
@@ -177,6 +177,21 @@ INSERT INTO `verify` (`student_id`, `date_of_birth`, `session_year`) VALUES
 (1, '2023-12-01', '10'),
 (11, '2011-11-11', '2011'),
 (1602049, '1996-11-18', '2016');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `voting`
+--
+
+CREATE TABLE `voting` (
+  `id` int(11) NOT NULL,
+  `studet_id` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+  `post` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+  `club` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+  `vote` int(11) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
