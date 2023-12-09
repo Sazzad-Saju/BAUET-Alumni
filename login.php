@@ -13,6 +13,8 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+$verify = isset($_GET['verify']) ? $_GET['verify'] : null;
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data
     $email = $_POST['email'];
@@ -23,12 +25,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = mysqli_query($connection, $query);
 
     if (mysqli_num_rows($result) == 1) {
-        // Start session and store user information
-        $_SESSION['email'] = $email;
-        $_SESSION['password'] = $password;
-        // Redirect to profile page or any other desired page
-        header('Location: stdprofile.php');
-        exit;
+        $row = mysqli_fetch_assoc($result);
+        $verificationValue = $row['verify'];
+        if($verificationValue == 1){
+            // Start session and store user information
+            $_SESSION['email'] = $email;
+            $_SESSION['password'] = $password;
+            // Redirect to profile page or any other desired page
+            header('Location: stdprofile.php');
+            exit;
+        }else{
+            $_SESSION['email'] = $email;
+            header('Location: verification.php?email='.urlencode($email));
+            exit;
+        }
     } 
     
 }
@@ -71,6 +81,9 @@ include 'nav.php';
             </div>
             <input type="submit" value="Submit" class="submit-button" />
             <?php
+            if ($verify == 1) {
+                echo "<p class='success-message'>You have successfully verified. Now login</p>";
+            }
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (mysqli_num_rows($result) != 1) {
                     echo "<p class='error-message'>Invalid email or password.</p>";
