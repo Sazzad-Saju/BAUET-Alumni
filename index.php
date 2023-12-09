@@ -71,7 +71,7 @@
 
         <!-- header section strats -->
         <header class="header_section">
-            <div class="header_top">
+            <div class="header_top desktop">
                 <div class="container text-center">
                     <div class="contact_nav row">
                             <div class="col">
@@ -361,84 +361,69 @@
         <h1> Image Gallery</h1>
     </div>
     
-    <div class="container-fluid fix-extends" id="works">
+    <?php
+        // Database connection configuration
+        $host = 'localhost';
+        $username = 'root';
+        $password = '';
+        $database = 'alumni';
+
+        // Create a new PDO instance
+        $pdo = new PDO("mysql:host=$host;dbname=$database", $username, $password);
+
+        // Fetch the latest 8 rows from the 'gallery' table
+        $stmt = $pdo->query("SELECT id, title, image FROM gallery ORDER BY id DESC LIMIT 8");
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Initialize an empty string to hold the HTML content
+        $htmlContent = '';
+
+        foreach ($rows as $row) {
+            $htmlContent .= '
+                <div class="col-md-3 work-sec">
+                    <div class="image-container">
+                        <img src="uploads/' . $row['image'] . '" class="img-fluid" alt="" width="480px" height="350px">
+                    </div>
+                    <div class="middle">
+                        <div class="text">
+                            <h2 class="title">' . htmlspecialchars($row['title']) . '</h2>
+                        </div>
+                    </div>
+                </div>';
+        }
+        
+        $stmt = $pdo->query("SELECT id, title, image FROM gallery ORDER BY id DESC LIMIT 4");
+        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $htmlContent2 = '';
+        foreach ($rows as $row) {
+            $htmlContent2 .= '
+                <div class="col-md-3 work-sec">
+                    <div class="image-container text-center">
+                        <img src="uploads/' . $row['image'] . '" class="img-fluid" alt="" width="480px" height="350px">
+                    </div>
+                    <div class="middle">
+                        <div class="text">
+                            <h2 class="title">' . htmlspecialchars($row['title']) . '</h2>
+                        </div>
+                    </div>
+                </div>';
+        }
+        // Close the database connection
+        $pdo = null;
+    ?>
+
+    <div class="container-fluid fix-extends desktop" id="works">
         <div class="row">
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work1.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work2.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work3.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work4.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row img-bellow">
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work5.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work6.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work7.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 work-sec">
-                <img src="https://sazzad-saju.github.io/Job-Task-1-Designing/img/work8.png" class="img-fluid" alt="">
-                <div class="middle">
-                    <div class="text">
-                        <p class="title">Project Name</p>
-                        <p>User Interface Design</p>
-                    </div>
-                </div>
-            </div>
+            <?php echo $htmlContent; ?>
         </div>
     </div>
+
+    <div class="container-fluid fix-extends mobile" id="works">
+        <div class="row">
+            <?php echo $htmlContent2; ?>
+        </div>
+    </div>
+
 
     <!-- <section class="thirdsection">
 

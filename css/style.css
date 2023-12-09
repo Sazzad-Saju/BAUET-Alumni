@@ -108,7 +108,7 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   /* padding: 3px 15px; */
-  margin: 10px 15px;
+  /* margin: 10px 15px; */
   color: #ffffff;
   font-family: monospace;
   text-align: center;
@@ -514,8 +514,23 @@ footer{
   height: 2px;
   background-color: red;
 }
+@media(min-width: 861px){
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: block;
+  }
+}
 
 @media (max-width: 860px) {
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  
   .above {
     display: none;
   }
@@ -654,4 +669,10 @@ footer{
   font-size: 16px;
   border: 1px solid #e7ebed;
   padding: 5px 0 5px 0;
+}
+
+.image-container img {
+  width: 480px;
+  height: 350px;
+  object-fit: cover; /* or object-fit: contain; depending on your preference */
 }
