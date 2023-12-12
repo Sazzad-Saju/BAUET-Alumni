@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Admin Login</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon.png">
     <style>
         /* CSS styling for the login card */
         .card {

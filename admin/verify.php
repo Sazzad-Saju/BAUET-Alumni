@@ -24,8 +24,9 @@ $email = $_SESSION['email'];
     <meta charset="UTF-8" />
     <title>Responsive Sidebar Menu | CodingLab</title>
     <link rel="stylesheet" href="css/verify.css" />
-
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon.png">
     <!-- Boxicons CDN Link -->
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon.png">
     <link
         href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
         rel="stylesheet"

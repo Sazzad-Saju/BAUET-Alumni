@@ -28,6 +28,7 @@ $email = $_SESSION['email'];
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   </head>
@@ -98,9 +99,18 @@ $email = $_SESSION['email'];
           </a>
           <span class="tooltip">Setting</span>
         </li>
+        <li>
+            <a href="/alumni/voting.php">
+                <!-- <iconify-icon icon="mdi:vote" class="vote-icon"></iconify-icon> -->
+                <!-- <i class="bx bx-upvote"></i> -->
+                <i class="bx bx-user-voice"></i>
+                <span class="links_name">Voting</span>
+            </a>
+            <span class="tooltip">Voting</span>
+        </li>
         <li class="profile">
           <div class="profile-details">
-            <img src="profile.jpg" alt="profileImg" />
+            <img src="images/profile.jpg" alt="profileImg" />
             <div class="name_job">
               <div class="name">Admin name</div>
               <div class="job">Super Admin</div>
@@ -182,6 +192,7 @@ $conn->close();
         </div>
     </div>
 </section>
+<!-- <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> -->
 <script>
       // Logout button click event
       document.getElementById("log_out").addEventListener("click", function() {

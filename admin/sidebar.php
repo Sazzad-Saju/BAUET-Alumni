@@ -59,9 +59,16 @@
             </a>
             <span class="tooltip">Setting</span>
         </li>
+        <li>
+            <a href="/alumni/voting.php">
+                <i class="bx bx-cog"></i>
+                <span class="links_name">Voting</span>
+            </a>
+            <span class="tooltip">Voting</span>
+        </li>
         <li class="profile">
             <div class="profile-details">
-                <img src="profile.jpg" alt="profileImg" />
+                <img src="images/profile.jpg" alt="profileImg" />
                 <div class="name_job">
                     <div class="name">Admin name</div>
                     <div class="job">Super Admin</div>

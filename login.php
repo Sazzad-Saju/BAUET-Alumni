@@ -60,7 +60,7 @@ mysqli_close($connection);
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
-
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon.png">
     <title>Login</title>
 </head>
 <body>
