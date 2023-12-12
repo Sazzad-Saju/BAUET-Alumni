@@ -289,7 +289,7 @@
 </head>
 <body>
 <?php
-  include 'admin/sidebar.php';
+  include 'sidebar.php';
   ?>
 
     <section class="section2"> 
@@ -327,7 +327,7 @@
             $stmt->execute();
 
             // Move the uploaded image file to a desired location
-            $targetDir = 'uploads/voting/'; // Change this to your desired directory
+            $targetDir = '../uploads/voting/'; // Change this to your desired directory
             $targetFile = $targetDir . basename($_FILES['image']['name']);
             move_uploaded_file($_FILES['image']['tmp_name'], $targetFile);
 
@@ -360,6 +360,6 @@
         </form>
     </div>
     </section>
-    <script src="admin/sidebar.js"></script>
+    <script src="sidebar.js"></script>
 </body>
 </html>
