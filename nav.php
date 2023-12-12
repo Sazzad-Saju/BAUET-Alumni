@@ -4,7 +4,7 @@
         <i class="fas fa-bars"></i>
       </label>
       <label class="logo">BAUET Alumni</label>
-      <ul>
+      <ul style="z-index: 1">
         <li><a class="" href="index.php">Home</a></li>
         <li><a href="allevent.php">Program & Events</a></li>
         <li><a href="#">ALUMNI STORY </a></li>

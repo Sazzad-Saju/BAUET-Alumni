@@ -120,8 +120,7 @@ include 'nav.php';
         <a style="text-decoration: none;margin-left:20px;" href="">Message</a>
         <a style="text-decoration: none;margin-left:20px;" href="">Notification</a>
         <a style="text-decoration: none;margin-left:20px;" href="./donetion.html">Donate</a>
-
-
+        <a style="text-decoration: none;margin-left:20px;" href="./vote.php">Vote</a>
     </div>
 
     <!-- <div class="marquee-content">

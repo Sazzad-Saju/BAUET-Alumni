@@ -35,6 +35,9 @@
               <a href="#"><i class="fab fa-instagram"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
+              <div class="row ml-2">
+                <p class="text-center">copyright <span id="displayYear"></span></p>
+              </div>
           </div>
         </div>
       </div>
