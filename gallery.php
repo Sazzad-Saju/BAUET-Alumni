@@ -6,6 +6,7 @@
         href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
         rel="stylesheet"
     />
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon.png">
     <style>
 
 .section2  {

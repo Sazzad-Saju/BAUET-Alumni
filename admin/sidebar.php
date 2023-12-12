@@ -11,21 +11,21 @@
             <span class="tooltip">Search</span>
         </li>
         <li>
-            <a href="/alumni/admin/index.php">
+            <a href="index.php">
                 <i class="bx bx-grid-alt"></i>
                 <span class="links_name">Dashboard</span>
             </a>
             <span class="tooltip">Dashboard</span>
         </li>
         <li>
-            <a href="/alumni/admin/verify.php">
+            <a href="verify.php">
                 <i class="bx bx-user"></i>
                 <span class="links_name">Verify User</span>
             </a>
             <span class="tooltip">User</span>
         </li>
         <li>
-            <a href="/alumni/admin/notice.php">
+            <a href="notice.php">
                 <i class="bx bx-bell"></i>
                 <span class="links_name">Notice Manage</span>
             </a>
@@ -39,29 +39,29 @@
             <span class="tooltip">Analytics</span>
         </li>
         <li>
-            <a href="/alumni/event.php">
+            <a href="../event.php">
                 <i class="bx bx-calendar"></i>
                 <span class="links_name">Event Notices Manage</span>
             </a>
             <span class="tooltip">Files</span>
         </li>
         <li>
-            <a href="/alumni/gallery.php">
+            <a href="gallery.php">
                 <i class="bx bx-image"></i>
                 <span class="links_name">Image Gallery</span>
             </a>
             <span class="tooltip">Setting</span>
         </li>
         <li>
-            <a href="/alumni/control.php">
+            <a href="control.php">
                 <i class="bx bx-cog"></i>
                 <span class="links_name">Setting</span>
             </a>
             <span class="tooltip">Setting</span>
         </li>
         <li>
-            <a href="/alumni/voting.php">
-                <i class="bx bx-cog"></i>
+            <a href="voting.php">
+                <i class="bx bx-user-voice"></i>
                 <span class="links_name">Voting</span>
             </a>
             <span class="tooltip">Voting</span>

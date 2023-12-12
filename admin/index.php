@@ -93,14 +93,14 @@ $email = $_SESSION['email'];
         </li>
 
         <li>
-          <a href="/alumni/control.php">
+          <a href="control.php">
             <i class="bx bx-cog"></i>
             <span class="links_name">Setting</span>
           </a>
           <span class="tooltip">Setting</span>
         </li>
         <li>
-            <a href="/alumni/voting.php">
+            <a href="voting.php">
                 <!-- <iconify-icon icon="mdi:vote" class="vote-icon"></iconify-icon> -->
                 <!-- <i class="bx bx-upvote"></i> -->
                 <i class="bx bx-user-voice"></i>
