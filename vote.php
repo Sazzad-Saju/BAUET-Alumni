@@ -120,38 +120,36 @@ include 'nav.php';
         $candidateIds[] = $voteFor['candidate_id'];
     }
     
-    if (!empty($candidateIds)) {    
-        // Fetching candidate data from the database
+    $htmlContent = '';
+    // Fetching candidate data from the database
         
-        $stmt = $pdo->query("SELECT * FROM `vote_candidates`");
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        $htmlContent = '';
-        foreach ($rows as $row) {
-            $htmlContent .= '
-            <div class="col-md-3">
-                <img src="uploads/voting/' . $row['image'] . '" class="img-fluid" alt="">
-                <p class="fullname">' . $row['name'] . '</p>
-                <small class="title-sec" style="color: grey">' . $row['post'] . '</small><br>
-                <small class="title-sec" style="color: grey">' . $row['club'] . '</small>
-                <div class="social-links">
-                    <small><i class="fa fa-facebook-f"></i></small>
-                    <small><i class="fa fa-twitter"></i></small>
-                    <small><i class="fa fa-linkedin"></i></small>
-                </div>
-                <small class="description">
-                    Vote wisely! One vote per candidate, no changes allowed. Your participation is crucial in this varsity club election. Make your mark and shape our future together.
-                </small>';
-        
-            // Check if the student_id exists in $candidateIds
-            if (in_array($row['student_id'], $candidateIds)) {
-                $htmlContent .= '<p class="title-sec text-center mt-3"><strong>Already Voted</strong></p>';
-            } else {
-                $htmlContent .= '<button type="button" class="btn btn-secondary btn-block mt-3 vote-button" data-student-id="' . $row['student_id'] . '">Vote</button>';
-            }
-        
-            // Close the <div>
-            $htmlContent .= '</div>';
+    $stmt = $pdo->query("SELECT * FROM `vote_candidates`");
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($rows as $row) {
+        $htmlContent .= '
+        <div class="col-md-3">
+            <img src="uploads/voting/' . $row['image'] . '" class="img-fluid" alt="">
+            <p class="fullname">' . $row['name'] . '</p>
+            <small class="title-sec" style="color: grey">' . $row['post'] . '</small><br>
+            <small class="title-sec" style="color: grey">' . $row['club'] . '</small>
+            <div class="social-links">
+                <small><i class="fa fa-facebook-f"></i></small>
+                <small><i class="fa fa-twitter"></i></small>
+                <small><i class="fa fa-linkedin"></i></small>
+            </div>
+            <small class="description">
+                Vote wisely! One vote per candidate, no changes allowed. Your participation is crucial in this varsity club election. Make your mark and shape our future together.
+            </small>';
+    
+        // Check if the student_id exists in $candidateIds
+        if (in_array($row['student_id'], $candidateIds)) {
+            $htmlContent .= '<p class="title-sec text-center mt-3"><strong>Already Voted</strong></p>';
+        } else {
+            $htmlContent .= '<button type="button" class="btn btn-secondary btn-block mt-3 vote-button" data-student-id="' . $row['student_id'] . '">Vote</button>';
         }
+    
+        // Close the <div>
+        $htmlContent .= '</div>';
     }
     // Close the database connection
     $pdo = null;
