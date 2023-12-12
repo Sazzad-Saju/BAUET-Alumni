@@ -211,6 +211,7 @@ include 'footter.php';
 <script>
     $(document).ready(function() {
     $('.vote-button').on('click', function() {
+        var button = $(this);
         var studentId = $(this).data('student-id');
 
         // Send a POST request
@@ -220,6 +221,7 @@ include 'footter.php';
             data: { student_id: studentId },
             success: function(response) {
                 console.log(response);
+                button.replaceWith('<p class="title-sec text-center mt-3"><strong>Already Voted</strong></p>');
             },
             error: function(error) {
                 console.log('error');
