@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 09, 2023 at 01:50 PM
--- Server version: 5.7.33
--- PHP Version: 8.1.20
+-- Generation Time: Dec 16, 2023 at 04:59 PM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,10 +28,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `adminlogin` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `adminlogin`
@@ -48,12 +48,19 @@ INSERT INTO `adminlogin` (`id`, `email`, `password`) VALUES
 --
 
 CREATE TABLE `all_post` (
-  `post_id` int(11) NOT NULL,
+  `post_id` int NOT NULL,
   `post_content` varchar(1000) DEFAULT NULL,
-  `student_id` int(11) NOT NULL,
+  `student_id` int NOT NULL,
   `post_date` date NOT NULL,
   `post_photo` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `all_post`
+--
+
+INSERT INTO `all_post` (`post_id`, `post_content`, `student_id`, `post_date`, `post_photo`) VALUES
+(1, '', 1602049, '2023-12-12', '');
 
 -- --------------------------------------------------------
 
@@ -62,11 +69,11 @@ CREATE TABLE `all_post` (
 --
 
 CREATE TABLE `event` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `event_title` varchar(255) DEFAULT NULL,
   `event_banner` varchar(4000) DEFAULT NULL,
   `event_description` varchar(5000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -75,10 +82,10 @@ CREATE TABLE `event` (
 --
 
 CREATE TABLE `gallery` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `title` varchar(255) NOT NULL,
   `image` varchar(5000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `gallery`
@@ -95,11 +102,11 @@ INSERT INTO `gallery` (`id`, `title`, `image`) VALUES
 --
 
 CREATE TABLE `login_codes` (
-  `id` int(11) NOT NULL,
-  `student_id` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `student_id` int NOT NULL,
   `code` varchar(6) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `login_codes`
@@ -115,11 +122,11 @@ INSERT INTO `login_codes` (`id`, `student_id`, `code`, `created_at`) VALUES
 --
 
 CREATE TABLE `notice` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `title` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `pdf_filename` varchar(4900) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -128,7 +135,7 @@ CREATE TABLE `notice` (
 --
 
 CREATE TABLE `students` (
-  `student_id` int(11) NOT NULL,
+  `student_id` int NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
   `father_name` varchar(255) NOT NULL,
@@ -146,7 +153,7 @@ CREATE TABLE `students` (
   `coverphoto` varchar(5000) DEFAULT NULL,
   `verification` varchar(6) DEFAULT NULL,
   `verify` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `students`
@@ -155,7 +162,8 @@ CREATE TABLE `students` (
 INSERT INTO `students` (`student_id`, `first_name`, `last_name`, `father_name`, `mother_name`, `date_of_birth`, `batch`, `department`, `session_year`, `photo`, `mobile`, `email`, `pass`, `currently_worked`, `livein`, `coverphoto`, `verification`, `verify`) VALUES
 (1, 'ds', 'ss', 'sf', 'gs', '2023-12-01', '10', 'CSE', '10', 'photo_uploads/Elena Miledi.jpg', '01766601932', 'saju@mail.com', 'saju', 'lynkto', NULL, NULL, NULL, 0),
 (11, 'a', 's', 'd', 'f', '2011-11-11', '1', 'CSE', '2011', 'photo_uploads/Allie Haze.jpg', '11', 't@mail.com', '123', 'a', NULL, NULL, '732451', 1),
-(1602049, 'Sazzad', 'Saju', 'Robert De Niro', 'Verenika', '1996-11-18', '10', 'CSE', '2016', 'photo_uploads/circle-cropped (2).png', '01766601932', 'sazzadsaju17@gmail.com', '123', 'lynkto', NULL, NULL, NULL, 0);
+(50, 'Shakia', 'shimu', 'xyz', 'yza', '2011-11-11', '7', 'CSE', '2021', 'photo_uploads/polagram-category-image.jpg', '+13563084222', 'lynkto@xyz.com', '123', 'lynkto', NULL, NULL, '816127', 0),
+(1602049, 'Sazzad', 'Saju', 'Robert De Niro', 'Verenika', '1996-11-18', '10', 'CSE', '2016', 'photo_uploads/circle-cropped (2).png', '01766601932', 'saju.cse.hstu@gmail.com', '123', 'lynkto', NULL, NULL, '123456', 1);
 
 -- --------------------------------------------------------
 
@@ -164,10 +172,10 @@ INSERT INTO `students` (`student_id`, `first_name`, `last_name`, `father_name`, 
 --
 
 CREATE TABLE `verify` (
-  `student_id` int(11) NOT NULL,
+  `student_id` int NOT NULL,
   `date_of_birth` date NOT NULL,
   `session_year` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data for table `verify`
@@ -176,22 +184,54 @@ CREATE TABLE `verify` (
 INSERT INTO `verify` (`student_id`, `date_of_birth`, `session_year`) VALUES
 (1, '2023-12-01', '10'),
 (11, '2011-11-11', '2011'),
+(50, '2011-11-11', '2021'),
 (1602049, '1996-11-18', '2016');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `voting`
+-- Table structure for table `vote_candidates`
 --
 
-CREATE TABLE `voting` (
-  `id` int(11) NOT NULL,
-  `studet_id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
-  `post` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
-  `club` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
-  `vote` int(11) NOT NULL DEFAULT '0'
+CREATE TABLE `vote_candidates` (
+  `id` int NOT NULL,
+  `student_id` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `post` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `club` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `image` varchar(1024) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vote_candidates`
+--
+
+INSERT INTO `vote_candidates` (`id`, `student_id`, `name`, `post`, `club`, `image`) VALUES
+(1, 1602049, 'SAJU', 'TREASURY ASSOCIATE', 'CSE CLUB OF BAUET', '1683599382254.jpg'),
+(5, 1602050, 'Silvia Aumie', 'General Secretary', 'CSE CLUB OF BAUET', 'banner22.png'),
+(6, 1602051, 'RAJU', 'TREASURY ASSOCIATE', 'CSE CLUB OF BAUET', 'beavely-category-image.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vote_counts`
+--
+
+CREATE TABLE `vote_counts` (
+  `id` int NOT NULL,
+  `student_id` int NOT NULL,
+  `candidate_id` int NOT NULL,
+  `vote` tinyint NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `vote_counts`
+--
+
+INSERT INTO `vote_counts` (`id`, `student_id`, `candidate_id`, `vote`) VALUES
+(7, 1602049, 1602050, 1),
+(8, 1602049, 1602049, 1),
+(9, 1602049, 1602051, 1);
 
 --
 -- Indexes for dumped tables
@@ -246,6 +286,18 @@ ALTER TABLE `verify`
   ADD PRIMARY KEY (`student_id`);
 
 --
+-- Indexes for table `vote_candidates`
+--
+ALTER TABLE `vote_candidates`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `vote_counts`
+--
+ALTER TABLE `vote_counts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -253,37 +305,49 @@ ALTER TABLE `verify`
 -- AUTO_INCREMENT for table `adminlogin`
 --
 ALTER TABLE `adminlogin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `all_post`
 --
 ALTER TABLE `all_post`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `post_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `login_codes`
 --
 ALTER TABLE `login_codes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `notice`
 --
 ALTER TABLE `notice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `vote_candidates`
+--
+ALTER TABLE `vote_candidates`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `vote_counts`
+--
+ALTER TABLE `vote_counts`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
