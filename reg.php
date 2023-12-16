@@ -86,6 +86,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo 'Message has been sent';
             }
             
+            $_SESSION['email'] = $email;
+            header('Location: verification.php?email='.urlencode($email));
+            exit;
             
         } else {
             echo "Error: " . mysqli_error($connection);
